@@ -3,6 +3,7 @@ var express = require('express');
 var app = express.createServer()
 .use(express.logger())
 .use(express.static(__dirname + '/bootstrap'))
+.use(express.static(__dirname + '/css'))
 .use(express.static(__dirname + '/extlinks'));
 
 app.get('/', function(request, response) {
